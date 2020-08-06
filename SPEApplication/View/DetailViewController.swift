@@ -17,15 +17,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionText: UILabel!
     
     var titleName = ""
+    var movie:Movie?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(titleName)
-        titleText.text = titleName
-        descriptionText.text = "This is description of movie \(titleName)"
-        imagePoster.image = UIImage(named: titleName)
+        titleText.text = movie?.title
+        descriptionText.text = movie?.description
+        imagePoster.image = UIImage(named: movie!.title)
         
     }
     
