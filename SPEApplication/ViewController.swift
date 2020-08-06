@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         if segue.identifier == "detailSegue", let destination = segue.destination as? DetailViewController {
                 let detail = movie[indexPathChoose!.row]
                 destination.titleName = detail
-                print(detail)
         }
     }
 
